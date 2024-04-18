@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+        border: 1px solid black;
+        .item {
+            .header {
+                background-color: skyblue;
+                padding: 20px 20px;
+                color: #150e0e;
+                cursor: pointer;
+            }
+    
+            .content {
+                background-color: whitesmoke;
+                padding: 0px 20px;
+                border: 1px solid #a3aeee;
+                text-align: justify;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.4s ease-in-out;
+            }
+    
+            &.active {
+                .content {
+                    padding: 20px;
+                    max-height: inherit;
+                }
+            }
+        }
+       
+    }
+}

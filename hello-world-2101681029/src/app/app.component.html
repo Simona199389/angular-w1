@@ -1,0 +1,15 @@
+
+<main class="main">
+  <div class="content">
+    <h1>{{homeworkTitle}}</h1>
+    <div class="card">
+        <div *ngFor="let item of items" class="item" [ngClass]="item.active ? 'active' : ''">
+            <div class="header" (click)="openAccordion(item.header)">{{item.header}}</div>
+            <div *ngIf="!item.type" class="content">{{item.content }}</div>
+            <a *ngIf="item.type === 'link'" href="{{item.content}}" target="_blank" class="content">{{item.content }}</a>
+        </div>
+    </div>
+  </div>
+</main>
+
+<router-outlet />
